@@ -13,6 +13,7 @@ The program stores input one character at the time inside a buffer, and if four 
 
 ![jumptable](img/no-check.png?raw=true)
 ![jumptable](img/buf.png?raw=true)
+
 (inputBuf is initially set to 0x39C)
 
 From here on:
