@@ -37,8 +37,8 @@ So, instead of submitting `m` as `q-1` we submit it as `(q-1)/2`. Since `u` is r
 
 We now don't have any unknowns left since we eliminated `u`. Now we only have to solve for the flag:
 
-`r = (gen^1 mod p) mod q = (gen mod p) mod q`
-`s = (1^(q-2) mod q)*(h + key*r) mod q = h + key*r mod q`
+`r = (gen^1 mod p) mod q = (gen mod p) mod q`  
+`s = (1^(q-2) mod q)*(h + key*r) mod q = h + key*r mod q`  
 `=> key = (s-h)*r^(-1) mod q`
 
 **Flag:** midnight{th4t_w4s_e4sy_eh?}
