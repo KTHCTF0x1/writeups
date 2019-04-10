@@ -16,10 +16,14 @@ The program stores input one character at the time inside a buffer, and if four 
 
 (inputBuf is initially set to 0x39C)
 
+The program just so happens to also have the flag printing part for the first half of the problem. We should aim to first make the program read out `FLAG2` instead of `FLAG1`, then jump to the entry point of the program using the jump table.
+
 From here on:
 1. Turn "FLAG1" into "FLAG2"
-2. Overwrite some function pointer inside the jumptable with the program entry (0x174).
+2. Overwrite some function pointer inside the jumptable with the program entry point (0x174).
 3. Execute command
+
+We start the script by sending the password for the previous part (see hfs-mbr)
 
 ## Solution
 
