@@ -22,6 +22,7 @@ We can see here that if we reach 9 on any of these two variables, the program do
 We can also see that incrementing the first counter also increments the second counter. Let's call the first counter `goodBoyPoints` and the second counter `badBoyPoints`.
 
 So we need to hit a good boy point every time, let's see which functions can yield that and analyze them. We see that these functions depend on the value `badBoyPoints`. For example:
+
 ![e](img/e.png?raw=true)
 
 This is the code which gets executed if we enter the character `e`. This will run `addGoodBoyPoint` iff `ds:0x81BA` (`badBoyPoints`) is equal to `0x7`. This means `e` is the `0x7`th character, 0 indexed. Repeating this analysis for each of the functions capable of giving us a good boy point, we finally get the password:
