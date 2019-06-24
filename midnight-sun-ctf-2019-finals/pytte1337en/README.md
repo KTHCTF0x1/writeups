@@ -19,7 +19,7 @@ Try `uncompyle6`. `pyc`-file is corrupted. Try to repare it. Realize it is writt
 
 We are given a `pyc`-file as the description says. We are also given an ip where the file is running. Running it or connecting to the server doesn't yield anything. Interacting with it gives us what looks like a shell but exits after two lines.
 
-![Interaction](./anim1.svg)
+<img src="./anim1.svg">
 
 Naturally, we try do decompile it with `uncompyle6`.
 
@@ -309,7 +309,7 @@ ourglobals = {"raw_input": our_raw_input, "chr": our_chr, "int": our_int}
 func = functype(code, ourglobals)
 print "RETURN VALUE:", repr(func())
 ```
-![anim2](./anim2.svg)
+<img src="./anim2.svg">
 
 Yeah... It inf-loops on the input `3`. We will understand that later.
 
@@ -364,6 +364,6 @@ print to_poly(list(map(decompose,res)))
 
 If we run the local hooked version of challenge.pyc with the polynomial for `print(open('flag.txt').read)` we get the following after suppressing the output for `int` and adding an accumulating string for the command. (For some reason I'm not sure of while writing this it doesn't work with the hooked version, but it does work with the original challenge.pyc. I think this has something to do with our hooked globals.)
 
-![anim3](./anim3.svg)
+<img src="./anim3.svg">
 
 Running it against the remote yields the flag: `midnight{pyc_is_not_just_to_uncompyle}`
