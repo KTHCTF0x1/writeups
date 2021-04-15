@@ -8,11 +8,9 @@ You find yourself at a labyrinth. Can you find the way through it?
 
 ### Solution:
 
-We are given a binary which accepts input:
+Objdump the given binary and extract all function calls in for every function. Then run dfs to find the path from walk_start to walk_end. Then manually save the letter that will result in that jump by dissasembling in Ghidra.
 
-Objdump binary and extract all function calls in every function. Then run dfs to find the path from walk_start to walk_end. Then manually save the letter that will result in that jump by dissasembling in Ghidra.
-
-Script to find path:
+Script to find path from objdump:
 ```python
 s = ''
 edges = {}
