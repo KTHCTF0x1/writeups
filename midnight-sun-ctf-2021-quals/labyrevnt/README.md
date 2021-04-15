@@ -32,19 +32,23 @@ with open('dmp', 'r') as o:
     for l in s.split('f<')[1:]:
         parse(l.replace('\n', '')[:-1])
 seen = []
-q = [('walk_start', 0)]
 
-while len(q):
-    n, s = q[0]
-    del q[0]
+
+def dfs(n):
     if n in seen:
-        continue
+        return None
     seen.append(n)
     if n == 'walk_end':
-        print(s)
-        exit()
+        return [n]
     for i in edges[n]:
-        q.append((i, s+1))
+        r = dfs(i)
+        if r != None:
+            return [n]+r
+
+
+print(dfs('walk_start'))
 ```
+**Password:** aBIksNPZlfMnluFMRqtNOAkdWfuMuTIICGGWvhbWYwMlbdlCGznVNVzAsHjynOjHuuuvMkOmLMhYVeEWKjGLhmhLxyvtvxpzGCWuibxDhGzEmAfkepZDINxdHTQkKrirkJNnmyVRweEjBoEAwgTVEEkEVdRjzAFcxZrdSYbPQstuILsIjOSWgLLLXvkCAQVyYqJxa
+
 
 **Flag:** midnight{y0u_w3r3_l05t_f0r_4_wh1l3_bu7_y0u_f1n411y_g0t_0ut}
