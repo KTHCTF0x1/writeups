@@ -14,10 +14,11 @@ The tar.gz contains a file called `HILFE.eml`, an email. The email has two other
 files attached to it. One elf-file encryption program and one encrypted message.
 Our goal is to decrypt the message.
 
-Someone else please fill in the beginning ...
+Running `strings` on the elf file shows things like `libpython3.8.so.1.0`, indicating that this is a pyinstaller elf.
 
-...
+We follow the instructions here to extract .pyc files:
 
+https://github.com/extremecoders-re/pyinstxtractor/wiki/Extracting-Linux-ELF-binaries
 
 We manage to extract the following .pyc-files from the elf:
 
