@@ -89,7 +89,7 @@ for i in range(500):
 p.interactive()
 ```
 
-We finally get the flag: 
+We get the flag: 
 ```
 HTB{w1th_4ll_th353_b0lt5_4nd_g3m5_1ll_cr4ft_th3_b35t_t00ls}
 ```

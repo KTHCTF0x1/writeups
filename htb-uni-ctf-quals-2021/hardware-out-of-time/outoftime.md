@@ -1,8 +1,8 @@
 # Out of time (Hardware)
 
-In this challenge we get a service that asks for a password and returns an array of 1000 numbers depending on the given password. These numbers are a bit different each time we submit the password, even if it's the same password. 
+In this challenge we get a service that asks for a password and returns an array of 1000 numbers depending on the given password. These numbers are a bit different each time we submit the password, even if the same password is provided. 
 
-We know that HTB{ should be the first part of the password. It's therefore good to analyze the two signals when a letter is correct and when it's not. To do this we decided to use fast fourier transform, this makes the differences clearer. 
+We know that HTB{ should be the first part of the password. It's therefore good to analyze the difference between two signals where we know that a letter is correct in one of them and incorrect in the other one. To do this we decided to use fast fourier transform, this makes the differences clearer. 
 
 Here we have 3 results from guessing the passwords A, O and H. Using fft on the array we get from guessing on these passwords. 
 
@@ -81,7 +81,7 @@ for i in range(100):
 	print (password_guess)
 ```
 
-What this does is fist guessing on "%" which we assume wont be a part of the flag. We then get the square mean of the difference between this and our next guess. We then pick the one with the greatest value. After doing this for a few iterations we get the flag. 
+What this does is fist guessing on "%" which we assume wont be a part of the flag. We then get the square mean of the difference between this and our next guess. We then pick the one with the greatest value. This will result in extracting the character that results in the greatest difference compared to all the other ones. After doing this for a few iterations we get the flag. 
 
 ```
 HTB{c4n7_h1d3_f20m_71m3} 
