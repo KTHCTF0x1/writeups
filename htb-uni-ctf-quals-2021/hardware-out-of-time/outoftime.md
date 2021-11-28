@@ -81,7 +81,7 @@ for i in range(100):
 	print (password_guess)
 ```
 
-What this does is fist guessing on "%" which we assume wont be a part of the flag. We then get the square mean of the difference between this and our next guess. We then pick the one with the greatest value. This will result in extracting the character that results in the greatest difference compared to all the other ones. After doing this for a few iterations we get the flag. 
+What this does is first guessing on "%" which we assume won't be a part of the flag. We then get the square mean of the difference between this and our next guess. We then pick the one with the greatest value. This will result in extracting the character that results in the greatest difference compared to all the other ones. After doing this for a few iterations we get the flag.
 
 ```
 HTB{c4n7_h1d3_f20m_71m3} 
